@@ -53,13 +53,16 @@
 		// position: relative;	  
 		transition-duration: 500ms;
 		transition-property: border-color;
+		@include media ('<=md') {
+			border-color: $second;
+		}
+
 		@include media ('<=xxs') {
 			margin: 0 auto;	
 		}
 	}
 
 	&__svg {
-	
 		height: 40px;
 		fill: $iconBg;
 		// position: absolute;
@@ -68,6 +71,9 @@
 		// transform: translate(-50%, -50%);
 		transition-duration: 500ms;
 		transition-property: fill;
+		@include media ('<=md') {
+			fill: $second;
+		}
 	}
 
 	&__subtitle {
@@ -81,6 +87,9 @@
 		line-height: 1.111;
 		transition-duration: 500ms;
 		transition-property: color;
+		@include media ('<=md') {
+			color: $second;
+		}
 	}
 
 	&__text {
@@ -92,6 +101,9 @@
 		margin-bottom: 30px;
 		transition-duration: 500ms;
 		transition-property: color;
+		@include media ('<=md') {
+			color: $white;
+		}
 		@include media ('<=xxs') {
 
 		}
