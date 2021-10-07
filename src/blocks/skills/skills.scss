@@ -1,0 +1,78 @@
+.skills {
+	$self: &;
+	margin-top: -150px;
+	background: $second;
+	@include media('<=sm') {
+		margin-top: 0;
+	}
+	&__wrap {
+		display: flex;
+		
+		@include media('<=sm') {
+			flex-direction: column;
+			margin-top: -50px;
+		}
+		&.wrap {
+			padding-top: 80px;
+			padding-bottom: 80px;
+			@include media('<=xs') {
+				padding-top: 40px;
+				padding-bottom: 40px;
+				
+			}
+		}
+	}
+
+	&__left {
+		flex-basis: 280px;
+		margin-right: 115px;
+		@include media('<=md') {
+			margin-right: 30px;
+		}
+		@include media('<=sm') {
+			flex-basis: auto;
+			margin-right: 0;
+			margin-bottom: 25px;
+		}
+	}
+
+	&__title {
+			font-size: 30px;
+			font-family: 'Raleway';
+			color: $white;
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: 0.933;
+			margin-bottom: 30px;	  
+			&::before { 
+				display: block;
+				content: '';
+				width: 70px;
+				height: 2px;
+				background-color: $white;
+				margin-bottom: 30px;
+			}
+	}
+
+	&__text {
+		font-size: 14px;
+		color: $white;
+		line-height: 1.429;
+		margin: 20px 0;
+	}
+
+	&__button {
+		@include button($primary){
+			margin-top: 50px;
+		};
+	}
+
+	&__right {
+		flex-grow: 1;
+	}
+
+	&__progress {
+		margin: 20px 0;
+	}
+
+}

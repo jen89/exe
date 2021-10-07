@@ -1,0 +1,108 @@
+.advantages {
+	$self: &;
+	padding: 60px 0 35px;
+	@include media ('<=xxs') {
+		padding: 30px 0 5px;	
+	}
+	&__title {
+		@include visually-hidden;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+		grid-column-gap: 30px;
+
+	}
+
+	&__item {
+		margin: 15px 0;
+		@include media ('<=xxs') {
+			text-align: center;
+		}
+
+		&:hover {
+			.advantages__img {
+				border-color: $second;
+			}
+
+			.advantages__svg {
+				fill: $second;
+			}
+
+			.advantages__subtitle {
+				color: $second;
+			}
+
+			.advantages__text {
+				color: $white;
+			}
+		}
+	}
+
+	&__img {	
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 104px;
+		height: 104px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: $circleBg;
+		border-radius: 50%;
+		// position: relative;	  
+		transition-duration: 500ms;
+		transition-property: border-color;
+		@include media ('<=xxs') {
+			margin: 0 auto;	
+		}
+	}
+
+	&__svg {
+	
+		height: 40px;
+		fill: $iconBg;
+		// position: absolute;
+		// left: 50%;
+		// top: 50%;
+		// transform: translate(-50%, -50%);
+		transition-duration: 500ms;
+		transition-property: fill;
+	}
+
+	&__subtitle {
+		margin-top: 30px;
+		margin-bottom: 20px;
+		font-size: 18px;
+		font-family: 'Raleway';
+		color: $colorTitle;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 1.111;
+		transition-duration: 500ms;
+		transition-property: color;
+	}
+
+	&__text {
+		font-size: 14px;
+		font-family: 'Roboto';
+		color: $colorTitle;
+		line-height: 1.429;
+		margin-top: 20px;
+		margin-bottom: 30px;
+		transition-duration: 500ms;
+		transition-property: color;
+		@include media ('<=xxs') {
+
+		}
+		&::after {
+			display: block;
+			content: '';
+			width: 70px;
+			height: 2px;
+			margin-top: 25px;
+			background-color: $second;
+		}
+	}
+
+}

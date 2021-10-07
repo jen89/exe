@@ -1,0 +1,36 @@
+.header {
+	$self: &;
+	border-bottom: 4px solid $second;
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+
+		@include media ('<=sm') {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+			&.wrap {
+				padding-top: 55px;
+				padding-bottom: 55px;
+				@include media ('<=sm') {
+					padding-top: 25px;
+					padding-bottom: 25px;
+				}
+			}
+	}
+
+	&__logo {
+		margin-right: 20px;
+		@include media ('<=sm') {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__menu {
+
+	}
+
+}

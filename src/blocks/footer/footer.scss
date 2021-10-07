@@ -1,0 +1,13 @@
+$bgFooter: #111111;
+.footer {
+	$self: &;
+	background-color: $bgFooter;
+
+	&__menu {
+		justify-content: center;
+		&.menu {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+}

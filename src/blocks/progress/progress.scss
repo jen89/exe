@@ -1,0 +1,52 @@
+.progress {
+	$self: &;
+
+	&__name {
+		font-family: 'Raleway';
+		font-size: 14px;
+		color: $white;
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 1.429;
+		margin: 10px 0;
+	}
+
+	&__element {
+		border: 1px solid rgb(255, 255, 255, 0.25);
+		border-radius: 3px;
+		padding: 2px;
+	}
+
+	&__line {
+		background-color: $white;
+		width: 0;
+		height: 4px;
+		position: relative;
+	}
+
+	&__tooltip {
+		width: 31px;
+		height: 21px;
+		background-color: $primary;
+		border-radius: 3px;
+		color: $white;
+		font-weight: bold;
+		line-height: 21px;
+		text-align: center;
+		position: absolute;
+		top: -32px;
+		right: -15px;
+		font-size: 11px;
+		display: none;
+		&::before {
+			content: '';
+			border: 4px solid transparent;
+			border-top: 4px solid $primary;
+			position: absolute;
+			bottom: -7px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+}

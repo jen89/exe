@@ -1,0 +1,25 @@
+$listColor: #959595;
+
+.list {
+	$self:&;
+	font-size: 14px;
+	color: $listColor;
+	line-height: 1.286;
+
+	&__element {
+		margin: 15px 0;
+		padding-left: 50px;
+		position: relative;
+		
+			&::before {
+				content: '';
+				background-color: $second;
+				width: 8px;
+				height: 2px;
+				position: absolute;
+				top: 50%;
+				left: 28px;
+				transform: translate(-50%);
+			}
+	}
+}

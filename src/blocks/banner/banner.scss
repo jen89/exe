@@ -1,0 +1,94 @@
+.banner {
+	$self: &;
+	background: url(images/bg-header.jpg) center top / cover no-repeat transparent;
+	@include media ('<=md') {
+		background: none;
+	}
+
+	&__wrap {
+		&.wrap {
+			padding-top: 255px;
+			padding-bottom: 255px;
+			@include media ('<=md') {
+				padding-top: 70px;
+				padding-bottom: 50px;
+			}
+		}
+	}
+
+	&__info {
+		max-width: 580px;
+		margin-left: auto;
+		@include media ('<=md') {
+			max-width: 100%;
+			margin-left: 0;
+		}
+	
+	}
+
+	&__title {
+		margin: 0;
+		font-size: 80px;
+		font-family: 'Raleway';
+		color: $white;
+		font-weight: 800;
+		text-transform: uppercase;
+		line-height: 1;
+		@include media ('<=sm') {
+			font-size: 50px;
+		}
+		@include media ('<=xxs') {
+			font-size: 40px;
+		}
+	}
+
+	&__little {
+		display: block;
+		font-size: 43px;
+		@include media ('<=sm') {
+			font-size: 27px;
+		}
+		@include media ('<=xxs') {
+			font-size: 21px;
+		}
+	}
+
+	&__red {
+		color: $second;
+	}
+
+	&__text {
+		font-size: 18px;
+		font-family: 'Raleway';
+		color: $color-text;
+		font-weight: 800;
+		text-transform: uppercase;
+		line-height: 1.333;
+		margin: 15px 0;
+		@include media ('<=sm') {
+			font-size: 15px;
+		}
+		@include media ('<=xxs') {
+			font-size: 12px;
+		}
+	}
+
+	&__button {
+		@include button(){
+			display: inline-block;
+			margin-top: 20px;
+			margin-bottom: 20px; 
+			margin-right: 25px;
+			@include media ('<=xxs') {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+		};
+		&_last {
+			margin-right: 0;
+			border-color: $white;
+			background-color:transparent;
+		}
+	}
+
+}

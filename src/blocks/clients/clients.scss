@@ -1,0 +1,86 @@
+$bgColor: #202020;
+$bgLine: #2f2f2f;
+$colorText: #464646;
+.clients {
+	$self: &;
+	background-color: $bgColor;
+	&__wrap {
+		&.wrap {
+			padding-top: 55px;
+			padding-bottom: 80px;
+			@include media ('<=xxs'){
+				padding-left: 30px;
+				padding-right: 40px;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 30px;
+		font-family: 'Raleway';
+		color: $white;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 0.933;
+		margin: 20px 0;
+		&::before {
+			content: '';
+			display: block;
+			width: 70px;
+			height: 2px;
+			margin: 0 auto 30px;
+			background-color: $bgLine;
+		}
+	}
+
+	&__text {
+		max-width: 520px;
+		margin: 25px auto;
+		font-size: 14px;
+		color: $colorText;
+		line-height: 1.429;
+		text-align: center;
+	}
+
+	&__carousel {
+		margin: 50px 0;
+		padding-left: 110px;
+		padding-right: 110px;
+		box-sizing: border-box;
+		@include media ('<=md'){
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+
+	}
+	
+	&__prev, &__next {
+		width: 30px;
+		height: 30px;
+		border-radius: 4px;
+		position: absolute;
+		transform: translateY(-50%);
+		transition-property:  background-color;
+		transition-duration: 500ms;
+	
+	}
+
+	&__prev {
+		background: url('images/icons-sprite.svg#icon-arrow-prev-view-dark') center / 9px 16px no-repeat rgba(255, 255, 255, 0.04);
+		left: 0;
+		top: 50%;
+		&:hover, &:active {
+			background: url('images/icons-sprite.svg#icon-arrow-prev-view-white') center / 9px 16px no-repeat $second;
+		}
+	}
+
+	&__next {
+		background: url('images/icons-sprite.svg#icon-arrow-next-view-dark') center / 9px 16px no-repeat rgba(255, 255, 255, 0.04);
+		right: 0;
+		top: 50%;
+		&:hover, &:active {
+			background: url('images/icons-sprite.svg#icon-arrow-next-view-white') center / 9px 16px no-repeat $second;
+		}
+	}
+}
